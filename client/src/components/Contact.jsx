@@ -55,9 +55,6 @@ const Contact = ({ listing }) => {
           >
             Send Message
           </Link>
-
-          <button className="bg-orange-700 text-white text-center p-3 uppercase rounded-lg hover:opacity-95" onClick={() => window.location.href = `mailto:${landlord.email}?subject=Regarding ${listing.name}&body=${message}`}>Contact Me</button>
-
         </div>
       )}
     </div>
