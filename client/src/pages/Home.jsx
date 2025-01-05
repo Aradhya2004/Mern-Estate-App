@@ -47,14 +47,13 @@ export default function Home() {
   }, []);
   return (
     <div>
- 
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto'>
         <h1 className='text-orange-700 font-bold text-3xl lg:text-6xl'>
           Find your next <span className='text-orange-500'>perfect</span>
           <br />
           place with ease
         </h1>
-        <div className='text-gray-orange text-xs sm:text-sm'>
+        <div className='text-gray-800 text-xs sm:text-sm'>
           GharLelo is the best place to find your next perfect place to
           live.
           <br />
@@ -62,7 +61,7 @@ export default function Home() {
         </div>
         <Link
           to={'/search'}
-          className='text-xs sm:text-sm text-slate-800 font-bold hover:underline'
+          className='text-slate-800 font-bold hover:underline'
         >
           Let's get started...
         </Link>
@@ -76,7 +75,7 @@ export default function Home() {
               <div
                 style={{
                   background: `url(${listing.imageUrls[0]}) center no-repeat`,
-                  backgroundSize: '2000px 600px'
+                  backgroundSize: 'cover',
                 }}
                 className='h-[500px]'
                 key={listing._id}
@@ -85,12 +84,13 @@ export default function Home() {
           ))}
       </Swiper>
 
+
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10'>
         {offerListings && offerListings.length > 0 && (
           <div className=''>
             <div className='my-3'>
               <h2 className='text-2xl font-semibold text-orange-600'>Recent offers</h2>
-              <Link className='text-sm text-blue-800 hover:underline' to={'/search?offer=true'}>Show more offers</Link>
+              <Link className='text-sm text-slate-800 hover:underline' to={'/search?offer=true'}>Show more offers</Link>
             </div>
             <div className='flex flex-wrap gap-4'>
               {offerListings.map((listing) => (
@@ -103,7 +103,7 @@ export default function Home() {
           <div className=''>
             <div className='my-3'>
               <h2 className='text-2xl font-semibold text-orange-600'>Recent places for rent</h2>
-              <Link className='text-sm text-blue-800 hover:underline' to={'/search?type=rent'}>Show more places for rent</Link>
+              <Link className='text-sm text-slate-800 hover:underline' to={'/search?type=rent'}>Show more places for rent</Link>
             </div>
             <div className='flex flex-wrap gap-4'>
               {rentListings.map((listing) => (
@@ -116,7 +116,7 @@ export default function Home() {
           <div className=''>
             <div className='my-3'>
               <h2 className='text-2xl font-semibold text-orange-600'>Recent places for sale</h2>
-              <Link className='text-sm text-blue-800 hover:underline' to={'/search?type=sale'}>Show more places for sale</Link>
+              <Link className='text-sm text-slate-800 hover:underline' to={'/search?type=sale'}>Show more places for sale</Link>
             </div>
             <div className='flex flex-wrap gap-4'>
               {saleListings.map((listing) => (

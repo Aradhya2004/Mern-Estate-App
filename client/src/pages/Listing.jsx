@@ -152,7 +152,7 @@ const Listing = () => {
             {currentUser && listing.userRef !== currentUser._id && !contact && (
                 <button
                     onClick = {() => setContact(true)}
-                    className="bg-orange-700 text-white rounded-lg uppercase p-3 hover:opacity-95"
+                    className="bg-orange-700 text-white rounded-2xl uppercase p-5 hover:opacity-90"
                 >Contact Landlord</button>
             )}
             

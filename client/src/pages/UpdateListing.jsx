@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytesResumable,
-} from "firebase/storage";
+import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage";
 import { app } from "../firebase.js";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
